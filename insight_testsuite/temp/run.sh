@@ -5,4 +5,4 @@
 #python ./src/h1b_counting.py ./input/h1b_input.csv ./output/top_10_occupations.txt ./output/top_10_states.txt
 rm ./src/compute.class
 javac ./src/compute.java
-java -cp ./src/ compute
+java -cp ./src/ compute ./input/h1b_input.csv
