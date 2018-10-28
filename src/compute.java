@@ -101,7 +101,7 @@ public class compute {
 	}
 
 	public static void main(String[] args) {
-		find("/Users/balaji/Documents/Github_New/h1b_statistics-master/insight_testsuite/tests/test_1/input/test1.csv");
+		find(args[0]);
 		find_top();
 //		System.out.println(map_states);
 //		System.out.println(map_position);
