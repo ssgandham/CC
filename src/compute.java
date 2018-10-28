@@ -44,15 +44,15 @@ public class compute {
 		}
 	}
 
-	public static void find_top(){
+	public static void find_top(String path_occupations, String path_states){
 		line_count--;
 		int print_line_size=10;
 //		System.out.println(certified);
 		DecimalFormat df = new DecimalFormat("#.0");
 		try {
+			BufferedWriter writer_occupations = new BufferedWriter(new FileWriter(path_occupations));
+			BufferedWriter writer_states = new BufferedWriter(new FileWriter(path_states));
 
-			BufferedWriter writer_states = new BufferedWriter(new FileWriter("./output/top_10_states.txt"));
-			BufferedWriter writer_occupations = new BufferedWriter(new FileWriter("./output/top_10_occupations.txt"));
 
 		PriorityQueue<Map.Entry<String,Integer>> pq_states = new PriorityQueue<>(
 		new Comparator<Map.Entry<String,Integer>>(){
@@ -101,8 +101,9 @@ public class compute {
 	}
 
 	public static void main(String[] args) {
+		// System.out.println(args[0]);
 		find(args[0]);
-		find_top();
+		find_top(args[1],args[2]);
 //		System.out.println(map_states);
 //		System.out.println(map_position);
 	}
