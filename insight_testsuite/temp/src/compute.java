@@ -101,7 +101,7 @@ public class compute {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(args[0]);
+		// System.out.println(args[0]);
 		find(args[0]);
 		find_top(args[1],args[2]);
 //		System.out.println(map_states);
